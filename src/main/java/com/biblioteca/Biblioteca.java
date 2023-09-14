@@ -16,6 +16,26 @@ public class Biblioteca {
         estoque = new ArrayList<LivroEstoque>();
     }
 
+    // Métodos de acesso (getters) para os atributos privados
+
+    public ArrayList<Livro> getLivros() {
+        return livros;
+    }
+
+    public ArrayList<Autor> getAutores() {
+        return autores;
+    }
+
+    public ArrayList<Editora> getEditoras() {
+        return editoras;
+    }
+
+    public ArrayList<LivroEstoque> getEstoque() {
+        return estoque;
+    }
+
+    // Resto da implementação da classe
+
     public void AdicionarLivro(Livro livro) {
         this.livros.add(livro);
     }

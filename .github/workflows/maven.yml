@@ -50,7 +50,7 @@ jobs:
         path: target/site/jacoco
 
     - name: Jacoco Report to PR
-      id: jacoco
+      id: jacocoReport
       uses: madrapps/jacoco-report@v1.6.1
       with:
           paths: ${{ github.workspace }}/build/reports/jacoco/testCoverage/testCoverage.xml

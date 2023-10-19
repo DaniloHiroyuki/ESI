@@ -29,15 +29,27 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-      
-    - name: Generate Jacoco Report
-      run: mvn jacoco:report
+
+    - name: Generate Jacoco Badge
+      id: jacoco
+      uses: cicirello/jacoco-badge-generator@v2
+      with:
+          badges-directory: badges
+          generate-branches-badge: true
+          generate-summary: true
+
+    - name: Log Coverage Report
+      run:
+          echo "coverage = ${{ steps.jacoco.outputs.coverage}}"
+          echo "branches = ${{ steps.jacoco.outputs.branches}}"
 
     - name: Upload Jacoco Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: jacoco-report
         path: target/site/jacoco
-
-    - name: Log Coverage Percentages
-      run: cat target/site/jacoco/index.html
+    
+    - name: Get coverage info
+      run:
+          echo "Total Coverage ${{ steps.jacoco.outputs.coverage-overall}}"
+          echo "Changed Files Coverage ${{steps.jacoco.outputs.coverage.changed-files}}"

@@ -38,6 +38,11 @@ jobs:
           generate-branches-badge: true
           generate-summary: true
 
+    - name: Run Coverage
+        run: |
+          chmod +x gradlew
+          ./gradlew testCoverage
+
     - name: Log Coverage Report
       run:
           echo "coverage = ${{ steps.jacoco.outputs.coverage}}"
@@ -48,8 +53,3 @@ jobs:
       with:
         name: jacoco-report
         path: target/site/jacoco
-    
-    - name: Get coverage info
-      run:
-          echo "Total Coverage ${{ steps.jacoco.outputs.coverage-overall }}"
-          echo "Changed Files Coverage ${{ steps.jacoco.outputs.coverage-changed-files }}"

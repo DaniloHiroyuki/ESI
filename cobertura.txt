@@ -1,0 +1,33 @@
+Sim, é possível realizar uma cobertura completa com JUnit. Fazendo os seguintes testes:
+Biblioteca:
+	•	Teste para verificar se o método AdicionarLivro() adiciona um livro ao estoque da biblioteca.
+	•	Teste para verificar se o método RemoverLivro() remove um livro do estoque da biblioteca.
+	•	Teste para verificar se o método AdicionarAutor() adiciona um autor ao estoque da biblioteca.
+	•	Teste para verificar se o método RemoverAutor() remove um autor do estoque da biblioteca.
+	•	Teste para verificar se o método AdicionarEditora() adiciona uma editora ao estoque da biblioteca.
+	•	Teste para verificar se o método RemoverEditora() remove uma editora do estoque da biblioteca.
+	•	Teste para verificar se o método AdicionarEstoque() adiciona um livro ao estoque da biblioteca.
+	•	Teste para verificar se o método RemoverEstoque() remove um livro do estoque da biblioteca.
+Livro:
+	•	Teste para verificar se o construtor da classe Livro cria um objeto válido.
+	•	Teste para verificar se o método getAutor() retorna o autor do livro.
+	•	Teste para verificar se o método getEditora() retorna a editora do livro.
+	•	Teste para verificar se o método getIsbn() retorna o ISBN do livro.
+	•	Teste para verificar se o método getTitulo() retorna o título do livro.
+	•	Teste para verificar se o método getPaginas() retorna o número de páginas do livro.
+LivroEstoque:
+	•	Teste para verificar se o construtor da classe LivroEstoque cria um objeto válido.
+	•	Teste para verificar se o método getLivro() retorna o livro do estoque.
+	•	Teste para verificar se o método getExemplares() retorna o número de exemplares do livro no estoque.
+	•	Teste para verificar se o método getValor() retorna o valor do livro no estoque.
+	•	Teste para verificar se o método IncrementarExemplar() incrementa o número de exemplares do livro no estoque.
+	•	Teste para verificar se o método DecrementarExemplar() decrementa o número de exemplares do livro no estoque.
+LivroVenda:
+	•	Teste para verificar se o construtor da classe LivroVenda cria um objeto válido.
+	•	Teste para verificar se o método getLivroDoEstoque() retorna o livro do estoque da venda.
+	•	Teste para verificar se o método getQuantidade() retorna a quantidade de livros vendidos.
+	•	Teste para verificar se o método IncrementarQuantidade() incrementa a quantidade de livros vendidos.
+	•	Teste para verificar se o método DecrementarQuantidade() decrementa a quantidade de livros vendidos.
+ 
+ 
+Com esses testes, é possível identificar qualquer problema que o código esteja apresentando, além de cobrir todos os pontos que podem ter problemas.
